@@ -1,0 +1,85 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	display: flex;
+	height: 100vh;
+	width: 100vw;	
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #F8F8FF;
+}
+
+.apresentacao {
+	display: flex;
+	flex-direction: column;
+}
+
+.apresentacao p {
+	text-align: center;
+	font-size: 2.5em;
+}
+
+
+.empresa {
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	font-size: 4em;
+	margin-bottom: 5%;
+	text-align: center;
+	background: #F8F8FF;
+	border-width: 0;
+}
+.pessoas {
+	font-family: 'Nunito', sans-serif;
+	font-size: 4em;
+	text-align: center;
+	background: #F8F8FF;
+	border-width: 0;
+}
+
+.contador {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin-top: 35%;
+}
+
+.botao {
+	width: 2em;
+	height: 2em;
+	border-radius: 100%;
+	margin: 7% 7%;
+	font-size: 6.5em;
+	text-align: center;
+	border-width: 0px;
+	background-color: #D3D3D3;
+}
+
+.botao:active {
+	transform: scale(1.02);
+	background-color: #ADD8E6;
+}
+
+.resultado {
+	width: 2.3em;
+	height: 2.3em;
+	text-align: center;
+	padding: none;
+	font-size: 8em;
+	border-width: 0px;
+	background-color: #B0E0E6;
+	border-radius: 10%;
+}
+
+.voltar {
+	font-family: 'Nunito', sans-serif;
+	text-transform: uppercase;
+	background-color: #1E90FF;
+	color: #FFFFFF;
+	font-size: 2em;
+	margin-top: 4em;
+	margin-bottom: 10em;
+	padding: 1em;
+	border-radius: 10%;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Contador pessoas</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div>			
+			<section class="caixa">
+				<h1 class="titulo">Bem vindo</h1>
+				<p class="paragrafo">Qual o nome da sua empresa?</p>
+				<input class="input" id="nomeEmpresa" type="text">
+				<p class="paragrafo">Quantos m² tem a sua empresa?</p>
+				<input class="input" id="tamanhoEmpresa" type="number">
+				<p class="paragrafo">Qual a distancia em metros de cada pessoa?</p>
+				<input class="input" id="capacidadeEmpresa" type="number">
+				<button class="botao" id="botao-entrar">entrar</button>
+			</section>
+		</div>
+	</body>
+</html>
+<script>
+	
+	function salvar(){
+
+		var nome = document.getElementById("nomeEmpresa").value;
+		var tamanho = document.getElementById("tamanhoEmpresa").value;
+		var capacidade = document.getElementById("capacidadeEmpresa").value;
+
+		sessionStorage.setItem('name', nome);
+		sessionStorage.setItem('size', tamanho);
+		sessionStorage.setItem('capacity', capacidade);
+	}
+
+	document.onchange = salvar;
+
+	function botao(){
+		if(document.getElementById("nomeEmpresa").value == "" 
+			|| 
+			document.getElementById("tamanhoEmpresa").value == ""
+			||
+			document.getElementById("capacidadeEmpresa").value == ""){
+
+			return alert("Preencha todos os campos.");
+
+		}else{
+			return window.location.href ="page-2.html";
+		}
+	}
+
+	var button = document.getElementById("botao-entrar");
+	button.onclick = botao;
+
+</script>

@@ -1,0 +1,55 @@
+body {
+	min-height: 100vh;
+	width: 100vw;
+}
+
+body div {
+	display: flex;
+	min-height: 100vh;
+	width: 100vw;
+	background: url("background.png");
+	font-family: 'Nunito', sans-serif;
+}
+
+.caixa {
+	display: flex;
+	background: #F5F5F5;
+	width: 70vw;
+	min-height: 50vh;
+	margin: auto auto;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 5px solid #000000;
+	border-radius: 5%;
+}
+
+.titulo {
+	margin: 1em 0 1.5em 0;
+	font-size: 3em;
+}
+
+.paragrafo {
+	font-size: 2em;
+}
+
+.input {
+	text-align: center;
+	margin: 1em 0 0.8em 0;
+	width: 80%;
+	font-size: 2em;
+	border-width: 0;
+	border-radius: 3%;
+}
+
+.botao {
+	font-family: 'Nunito', sans-serif;
+	background-color: #1E90FF;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	padding: 3% 7%;
+	margin: 5%;
+	font-size: 2em;
+	border-radius: 8%;
+}

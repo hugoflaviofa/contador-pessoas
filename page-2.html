@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Contador pessoas</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style-page2.css">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<section class="apresentacao">
+			
+			<input type="text" class="empresa" id="nome-empresa" disabled="disabled">
+			<p>Nº máximo de pessoas:</p>
+			<input type="text" class="pessoas" id="quantidade-pessoas" disabled="disabled">
+
+		</section>
+		<section class="contador">
+			<button id="menos" class="botao">-</button>
+			<input id="resultado" class="resultado">
+			<button id="mais" class="botao">+</button>
+		</section>
+		<div>
+			<button class="voltar" onclick="window.location.href ='index.html'">voltar</button>
+		</div>
+	</body>
+</html>
+
+<script>
+	document.getElementById("resultado").value = 0;
+
+	function mais(){
+
+		if(document.getElementById("resultado").value >= Math.round(quantidadeMaxima)){
+			return document.getElementById("resultado").value = Math.round(quantidadeMaxima), alert("Capacidade máxima atingida!");
+		}else{
+			return document.getElementById("resultado").value = parseInt(document.getElementById("resultado").value) + 1;
+			}
+	}
+
+	function menos(){
+		if(parseInt(document.getElementById("resultado").value) <= 0){
+			document.getElementById("resultado").value = 0;
+		}else{
+			return document.getElementById("resultado").value = parseInt(document.getElementById("resultado").value) - 1;
+			}
+	}
+
+	var botaoMais = document.getElementById("mais");
+	botaoMais.onclick = mais;
+	
+	var botaoMenos = document.getElementById("menos");
+	botaoMenos.onclick = menos;
+
+	document.getElementById("nome-empresa").value = sessionStorage.getItem('name');
+
+	var tamanhoEmpresa = parseInt(sessionStorage.getItem('size'));
+	var quantidadePessoas = parseFloat(sessionStorage.getItem('capacity'));
+
+	var quantidadeMaxima = tamanhoEmpresa / quantidadePessoas;
+
+	document.getElementById("quantidade-pessoas").value = Math.round(quantidadeMaxima);
+
+</script>
