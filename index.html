@@ -22,27 +22,4 @@
 		</div>
 	</body>
 </html>
-<script>
-	
-	import './salvar.js';
-
-	document.onchange = salvar;
-
-	function botao(){
-		if(document.getElementById("nomeEmpresa").value == "" 
-			|| 
-			document.getElementById("tamanhoEmpresa").value == ""
-			||
-			document.getElementById("capacidadeEmpresa").value == ""){
-
-			return alert("Preencha todos os campos.");
-
-		}else{
-			return window.location.href ="page-2.html";
-		}
-	}
-
-	var button = document.getElementById("botao-entrar");
-	button.onclick = botao;
-
-</script>
+<script src="funcoes-page1.js"></script>
